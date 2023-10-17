@@ -1,0 +1,12 @@
+
+# Keypair defintion
+keypair:
+    - key_name: SVC_TAPAD_ADMIN_DEV
+      privatekey_name: SVC_TAPAD_ADMIN_DEV
+      publickey_name: SVC_TAPAD_ADMIN_DEV
+    - key_name: SVC_TAPAD_ADMIN_STAGE
+      privatekey_name: SVC_TAPAD_ADMIN_STAGE
+      publickey_name: SVC_TAPAD_ADMIN_STAGE   
+    - key_name: SVC_TAPAD_ADMIN_PROD
+      privatekey_name: SVC_TAPAD_ADMIN_PROD
+      publickey_name: SVC_TAPAD_ADMIN_PROD           

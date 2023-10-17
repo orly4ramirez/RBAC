@@ -1,0 +1,4 @@
+
+schema_create:
+  - database: TEST_DB 
+    schema: TEST_SCHEMA

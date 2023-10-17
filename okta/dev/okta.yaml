@@ -1,0 +1,95 @@
+okta_add_users_map:
+  - login: "CZENG@VIDEOAMP.COM"
+    first_name: "Czeng"
+    last_name: "zzzzzz" 
+    email: "CZENG@VIDEOAMP.COM"
+    password_inline_hook: "default"
+
+  - login: ZSHAINSKY@VIDEOAMP.COM
+    first_name: "ZSHAINSKY"
+    last_name: "ZSHAINSKY" 
+    email: "ZSHAINSKY@VIDEOAMP.COM"
+    password_inline_hook: "default" 
+
+  - login: grojas@videoamp.com
+    first_name: "grojas"
+    last_name: "grojas" 
+    email: "grojas@videoamp.com"
+    password_inline_hook: "default" 
+
+  - login: jslay@videoamp.com
+    first_name: "jslay"
+    last_name: "jslay" 
+    email: "jslay@videoamp.com"
+    password_inline_hook: "default" 
+
+okta_group_names:
+  - okta_group_name: TEAM_IDENTITY_ENG_PII  
+    okta_group_description: "functional role identity_eng_team_pii"
+    okta_group_skip_users: "false"
+
+  - okta_group_name: TEAM_IDENTITY_ENG 
+    okta_group_description: "functional role identity_eng_team"
+    okta_group_skip_users: "false"
+
+  - okta_group_name: TEAM_ANLY_PII
+    okta_group_description: "functional role anly_team_pii" 
+    okta_group_skip_users: "false"  
+
+  - okta_group_name: TEAM_MS_PII
+    okta_group_description: "functional role ms_team_pii" 
+    okta_group_skip_users: "false"  
+
+  - okta_group_name: TEAM_DS_PII
+    okta_group_description: "functional role ds_team_pii" 
+    okta_group_skip_users: "false"  
+
+  - okta_group_name: TEAM_IDENTITY_ADMIN
+    okta_group_description: "functional role ds_team_pii" 
+    okta_group_skip_users: "true"  
+
+assign:
+  - groupname: TEAM_IDENTITY_ENG_PII
+    app: snowflake 
+    employees:
+      - login: CZENG@VIDEOAMP.COM
+      - login: MFASHING@VIDEOAMP.COM
+      - login: YWANG@VIDEOAMP.COM
+      - login: ZSHAINSKY@VIDEOAMP.COM
+      - login: JSNOW@VIDEOAMP.COM
+      - login: ESIEBRANDT@VIDEOAMP.COM
+
+  - groupname: TEAM_IDENTITY_ENG
+    app: snowflake 
+    employees:
+      - login: CZENG@VIDEOAMP.COM
+      - login: MFASHING@VIDEOAMP.COM
+      - login: YWANG@VIDEOAMP.COM
+      - login: ZSHAINSKY@VIDEOAMP.COM
+      - login: JSNOW@VIDEOAMP.COM
+      - login: ESIEBRANDT@VIDEOAMP.COM
+
+  - groupname: TEAM_ANLY_PII
+    app: Snowflake rbac
+    employees:
+      - login: ADRIA@videoamp.com
+      - login: JSLAY@videoamp.com
+
+  - groupname: TEAM_MS_PII
+    app: Snowflake rbac
+    employees:
+      - login: eweng@videoamp.com  
+      - login: jp@videoamp.com  
+
+  - groupname: TEAM_DS_PII
+    app: Snowflake rbac 
+    employees:   
+      - login: ASHAHIDI@videoamp.com               
+      - login: HASASI@videoamp.com
+      - login: RMOHSENINIA@videoamp.com   
+
+  - groupname: TEAM_IDENTITY_ADMIN
+    app: Snowflake rbac 
+    employees:   
+      - login: MFASHING@videoamp.com               
+      - login: YWANG@videoamp.com        

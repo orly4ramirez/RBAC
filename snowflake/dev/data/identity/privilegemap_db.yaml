@@ -1,0 +1,21 @@
+
+# Mapping of Database privileges to a schema roles
+privilegemap_db:
+  -  privilege: USAGE
+     database: CLOUDZERO_SHARED_DATA    
+     role:
+     - SCH_IDENTITY_DEV_TAPAD_READER
+     - SCH_IDENTITY_DEV_TAPAD_WRITER
+     - SCH_IDENTITY_DEV_INFUTOR_READER
+     - SCH_IDENTITY_DEV_INFUTOR_WRITER
+     - SCH_IDENTITY_DEV_XWALK_READER
+     - SCH_IDENTITY_DEV_XWALK_WRITER
+     - FUNC_XWALK_ADMIN_DEV
+     - FUNC_XWALK_ADMIN_STAGE
+     - FUNC_XWALK_ADMIN_PROD                  
+
+  -  privilege: CREATE SCHEMA
+     database: CLOUDZERO_SHARED_DATA    
+     role:
+        - SCH_IDENTITY_DEV_TAPAD_ADMIN            
+     

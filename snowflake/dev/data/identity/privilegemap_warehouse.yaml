@@ -1,0 +1,9 @@
+
+
+# WAREHOUSE PRIVILEGES
+privilegemap_warehouse:
+  - privilege: USAGE
+    warehouse: DEVOPS_WH
+    role: 
+      - SCH_IDENTITY_DEV_XWALK_READER   
+      

@@ -1,0 +1,361 @@
+
+
+# Node definition for Database & Schema
+dbschema_1: &dbschema_1 # TAPAD
+    database: CLOUDZERO_SHARED_DATA  
+    schema: ACCOUNT_USAGE 
+dbschema_2: &dbschema_2 # INFUTOR
+    database: CLOUDZERO_SHARED_DATA  
+    schema: ACCOUNT_USAGE       
+dbschema_3: &dbschema_3 # INFUTOR_HISTORY
+    database: CLOUDZERO_SHARED_DATA  
+    schema: ACCOUNT_USAGE  
+dbschema_4: &dbschema_4 # XWALK
+    database: CLOUDZERO_SHARED_DATA  
+    schema: ACCOUNT_USAGE 
+dbschema_5: &dbschema_5 # PROD.IDENTITY
+    database: CLOUDZERO_SHARED_DATA  
+    schema: ACCOUNT_USAGE     
+
+##### SCHEMA PRIVILEGES
+##### IDENTITY_DEV
+# TAPAD
+privilegemap_schema:
+  - privilege: USAGE
+    <<: *dbschema_1
+    role:
+    - SCH_IDENTITY_DEV_TAPAD_READER
+    - SCH_IDENTITY_DEV_TAPAD_WRITER    
+    - SCH_IDENTITY_DEV_XWALK_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_1      
+    role:
+      - SCH_IDENTITY_DEV_TAPAD_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_1      
+    role:
+      - SCH_IDENTITY_DEV_TAPAD_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_1     
+    role:
+      - SCH_IDENTITY_DEV_TAPAD_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_1    
+    role:
+      - SCH_IDENTITY_DEV_TAPAD_WRITER                           
+
+# INFUTOR
+  - privilege: USAGE
+    <<: *dbschema_2
+    role:
+    - SCH_IDENTITY_DEV_INFUTOR_READER
+    - SCH_IDENTITY_DEV_INFUTOR_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_2      
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_2      
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_2     
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_2    
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER             
+               
+# INFUTOR_HISTORY
+  - privilege: USAGE
+    <<: *dbschema_3
+    role:
+    - SCH_IDENTITY_DEV_INFUTOR_READER
+    - SCH_IDENTITY_DEV_INFUTOR_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_3      
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_3      
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_3     
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_3    
+    role:
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER             
+            
+# XWALK
+  - privilege: USAGE
+    <<: *dbschema_4
+    role:
+    - SCH_IDENTITY_DEV_XWALK_READER
+    - SCH_IDENTITY_DEV_XWALK_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_4      
+    role:
+      - SCH_IDENTITY_DEV_XWALK_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_4      
+    role:
+      - SCH_IDENTITY_DEV_XWALK_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_4     
+    role:
+      - SCH_IDENTITY_DEV_XWALK_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_4    
+    role:
+      - SCH_IDENTITY_DEV_XWALK_WRITER  
+
+#### IDENTITY_STAGE
+# TAPAD
+  - privilege: USAGE
+    <<: *dbschema_1
+    role:
+    - SCH_IDENTITY_STAGE_TAPAD_READER
+    - SCH_IDENTITY_STAGE_TAPAD_WRITER   
+    - SCH_IDENTITY_STAGE_XWALK_WRITER     
+    - SCH_IDENTITY_DEV_XWALK_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_1      
+    role:
+      - SCH_IDENTITY_STAGE_TAPAD_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_1      
+    role:
+      - SCH_IDENTITY_STAGE_TAPAD_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_1     
+    role:
+      - SCH_IDENTITY_STAGE_TAPAD_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_1    
+    role:
+      - SCH_IDENTITY_STAGE_TAPAD_WRITER                           
+
+# INFUTOR
+  - privilege: USAGE
+    <<: *dbschema_2
+    role:
+    - SCH_IDENTITY_STAGE_INFUTOR_READER
+    - SCH_IDENTITY_STAGE_INFUTOR_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_2      
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_2      
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_2     
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_2    
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER             
+               
+# INFUTOR_HISTORY
+  - privilege: USAGE
+    <<: *dbschema_3
+    role:
+    - SCH_IDENTITY_STAGE_INFUTOR_READER
+    - SCH_IDENTITY_STAGE_INFUTOR_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_3      
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_3      
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_3     
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_3    
+    role:
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER             
+            
+# XWALK
+  - privilege: USAGE
+    <<: *dbschema_4
+    role:
+    - SCH_IDENTITY_STAGE_XWALK_READER
+    - SCH_IDENTITY_STAGE_XWALK_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_4      
+    role:
+      - SCH_IDENTITY_STAGE_XWALK_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_4      
+    role:
+      - SCH_IDENTITY_STAGE_XWALK_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_4     
+    role:
+      - SCH_IDENTITY_STAGE_XWALK_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_4    
+    role:
+      - SCH_IDENTITY_STAGE_XWALK_WRITER             
+       
+#### IDENTITY_PROD   
+# TAPAD
+  - privilege: USAGE
+    <<: *dbschema_1
+    role:
+    - SCH_IDENTITY_PROD_TAPAD_WRITER
+    - SCH_IDENTITY_PROD_TAPAD_READER
+    - SCH_IDENTITY_PROD_XWALK_WRITER   
+    - SCH_IDENTITY_STAGE_XWALK_WRITER     
+    - SCH_IDENTITY_DEV_XWALK_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_1      
+    role:
+      - SCH_IDENTITY_PROD_TAPAD_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_1      
+    role:
+      - SCH_IDENTITY_PROD_TAPAD_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_1     
+    role:
+      - SCH_IDENTITY_PROD_TAPAD_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_1    
+    role:
+      - SCH_IDENTITY_PROD_TAPAD_WRITER                           
+
+# INFUTOR
+  - privilege: USAGE
+    <<: *dbschema_2
+    role:
+    - SCH_IDENTITY_PROD_INFUTOR_READER
+    - SCH_IDENTITY_PROD_INFUTOR_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_2      
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_2      
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_2     
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_2    
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER             
+               
+# INFUTOR_HISTORY
+  - privilege: USAGE
+    <<: *dbschema_3
+    role:
+    - SCH_IDENTITY_PROD_INFUTOR_READER
+    - SCH_IDENTITY_PROD_INFUTOR_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_3      
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_3      
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_3     
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_3    
+    role:
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER             
+            
+# XWALK
+  - privilege: USAGE
+    <<: *dbschema_4
+    role:
+    - SCH_IDENTITY_PROD_XWALK_READER
+    - SCH_IDENTITY_PROD_XWALK_WRITER
+
+  - privilege: CREATE SEQUENCE
+    <<: *dbschema_4      
+    role:
+      - SCH_IDENTITY_PROD_XWALK_WRITER     
+
+  - privilege: CREATE TABLE
+    <<: *dbschema_4      
+    role:
+      - SCH_IDENTITY_PROD_XWALK_WRITER         
+
+  - privilege: CREATE PROCEDURE
+    <<: *dbschema_4     
+    role:
+      - SCH_IDENTITY_PROD_XWALK_WRITER         
+
+  - privilege: CREATE FUNCTION
+    <<: *dbschema_4    
+    role:
+      - SCH_IDENTITY_PROD_XWALK_WRITER             
+       
+#### PROD  
+# IDENTITY
+  - privilege: USAGE
+    <<: *dbschema_5
+    role:
+    - FUNC_XWALK_ADMIN_DEV
+

@@ -1,0 +1,14 @@
+
+# Node definition of Database/Schema/Function
+dbschema_function_1: &dbschema_function_1
+    <<: *dbschema_1
+
+# FUNCTION PRIVILEGES
+###### IDENTITY_DEV
+# TAPAD
+privilegemap_function:
+  - privilege: USAGE
+    <<: *dbschema_function_1
+    role: 
+      - SCH_IDENTITY_DEV_XWALK_READER   
+      

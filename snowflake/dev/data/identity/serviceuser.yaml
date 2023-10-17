@@ -1,0 +1,21 @@
+
+# Service account definition     
+serviceuser:
+  - login_name: SVC_TAPAD_ADMIN_DEV
+    default_role: NONE
+  - login_name: SVC_TAPAD_ADMIN_STAGE
+    default_role: NONE
+  - login_name: SVC_TAPAD_ADMIN_PROD
+    default_role: NONE    
+  - login_name: SVC_INFUTOR_ETL_DEV
+    default_role: NONE
+  - login_name: SVC_INFUTOR_ETL_STAGE
+    default_role: NONE
+  - login_name: SVC_INFUTOR_ETL_PROD
+    default_role: NONE  
+  - login_name: SVC_XWALK_ADMIN_DEV
+    default_role: NONE
+  - login_name: SVC_XWALK_ADMIN_STAGE
+    default_role: NONE
+  - login_name: SVC_XWALK_ADMIN_PROD
+    default_role: NONE  

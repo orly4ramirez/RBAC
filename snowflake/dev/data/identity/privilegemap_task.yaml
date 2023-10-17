@@ -1,0 +1,19 @@
+
+# Node definition of Database/Schema/Task
+dbschema_task_1: &dbschema_task_1
+    <<: *dbschema_1
+dbschema_task_2: &dbschema_task_2
+    <<: *dbschema_2
+dbschema_task_3: &dbschema_task_3
+    <<: *dbschema_3
+dbschema_task_4: &dbschema_task_4
+    <<: *dbschema_4
+
+# TASK PRIVILEGES
+##### IDENTITY_DEV
+# TAPAD
+privilegemap_task:
+  - privilege: OPERATE
+    <<: *dbschema_task_1
+    role: 
+      - SCH_IDENTITY_DEV_XWALK_READER         

@@ -1,0 +1,14 @@
+
+# Masking policy definition specific to Database & Schema
+maskingpolicy:
+  -  name: SCH_IDENTITY_DEV_TAPAD_READER_MASK
+     <<: *dbschema_1
+     value_data_type: string
+     masking_expression: "case when current_role() in ('SCH_IDENTITY_STAGE_TAPAD_PII_READER') then val else sha2(val, 512) end"
+     return_data_type: string
+
+  -  name: SCH_IDENTITY_DEV_INFUTOR_READER_MASK
+     <<: *dbschema_2
+     value_data_type: string
+     masking_expression: "case when current_role() in ('SCH_IDENTITY_STAGE_INFUTOR_PII_READER') then val else sha2(val, 512) end"
+     return_data_type: string

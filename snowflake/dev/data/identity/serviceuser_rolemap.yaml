@@ -1,0 +1,31 @@
+
+
+# Mapping of Service account privileges to a schema roles
+serviceuser_rolemap:
+  - grantee: FUNC_TAPAD_ADMIN_DEV  
+    user: 
+      - SVC_TAPAD_ADMIN_DEV
+  - grantee: FUNC_TAPAD_ADMIN_STAGE  
+    user: 
+      - SVC_TAPAD_ADMIN_STAGE
+  - grantee: FUNC_TAPAD_ADMIN_PROD  
+    user: 
+      - SVC_TAPAD_ADMIN_PROD
+  - grantee: FUNC_INFUTOR_ETL_DEV  
+    user: 
+      - SVC_INFUTOR_ETL_DEV
+  - grantee: FUNC_INFUTOR_ETL_STAGE  
+    user: 
+      - SVC_INFUTOR_ETL_STAGE
+  - grantee: FUNC_INFUTOR_ETL_PROD  
+    user: 
+      - SVC_INFUTOR_ETL_PROD
+  - grantee: FUNC_XWALK_ADMIN_DEV  
+    user: 
+      - SVC_XWALK_ADMIN_DEV
+  - grantee: FUNC_XWALK_ADMIN_STAGE  
+    user: 
+      - SVC_XWALK_ADMIN_STAGE
+  - grantee: FUNC_XWALK_ADMIN_PROD  
+    user: 
+      - SVC_XWALK_ADMIN_PROD

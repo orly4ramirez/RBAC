@@ -1,0 +1,295 @@
+# Node defintion of Database/Schema/Table
+dbschema_table_1: &dbschema_table_1
+    <<: *dbschema_1   
+
+dbschema_table_2: &dbschema_table_2
+    <<: *dbschema_2   
+
+dbschema_table_3: &dbschema_table_3
+    <<: *dbschema_3   
+
+dbschema_table_4: &dbschema_table_4
+    <<: *dbschema_4   
+
+dbschema_table_5: &dbschema_table_5
+    <<: *dbschema_5   
+
+# TABLE PRIVILEGES
+privilegemap_table:
+##### IDENTITY_DEV
+# TAPAD
+  - privilege: SELECT     
+    <<: *dbschema_table_1
+    role: 
+    - SCH_IDENTITY_DEV_TAPAD_READER
+    - SCH_IDENTITY_DEV_TAPAD_WRITER
+    - SCH_IDENTITY_DEV_XWALK_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_DEV_TAPAD_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_DEV_TAPAD_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_DEV_TAPAD_WRITER         
+
+  # INFUTOR
+  - privilege: SELECT     
+    <<: *dbschema_table_2
+    role: 
+    - SCH_IDENTITY_DEV_INFUTOR_READER
+    - SCH_IDENTITY_DEV_INFUTOR_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+    
+  # INFUTOR_HISTORY
+  - privilege: SELECT     
+    <<: *dbschema_table_3
+    role: 
+    - SCH_IDENTITY_DEV_INFUTOR_READER
+    - SCH_IDENTITY_DEV_INFUTOR_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_DEV_INFUTOR_WRITER         
+    
+  # XWALK
+  - privilege: SELECT     
+    <<: *dbschema_table_4
+    role: 
+    - SCH_IDENTITY_DEV_XWALK_READER
+    - SCH_IDENTITY_DEV_XWALK_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_DEV_XWALK_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_DEV_XWALK_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_DEV_XWALK_WRITER         
+
+##### IDENTITY_STAGE  
+# TAPAD      
+  - privilege: SELECT     
+    <<: *dbschema_table_1
+    role: 
+    - SCH_IDENTITY_STAGE_TAPAD_READER
+    - SCH_IDENTITY_STAGE_TAPAD_WRITER
+    - SCH_IDENTITY_STAGE_XWALK_WRITER
+    - SCH_IDENTITY_DEV_XWALK_WRITER     
+  - privilege: INSERT     
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_STAGE_TAPAD_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_STAGE_TAPAD_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_STAGE_TAPAD_WRITER         
+
+  # INFUTOR
+  - privilege: SELECT     
+    <<: *dbschema_table_2
+    role: 
+    - SCH_IDENTITY_STAGE_INFUTOR_READER
+    - SCH_IDENTITY_STAGE_INFUTOR_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+    
+  # INFUTOR_HISTORY
+  - privilege: SELECT     
+    <<: *dbschema_table_3
+    role: 
+    - SCH_IDENTITY_STAGE_INFUTOR_READER
+    - SCH_IDENTITY_STAGE_INFUTOR_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_STAGE_INFUTOR_WRITER         
+    
+  # XWALK
+  - privilege: SELECT     
+    <<: *dbschema_table_4
+    role: 
+    - SCH_IDENTITY_STAGE_XWALK_READER
+    - SCH_IDENTITY_STAGE_XWALK_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_STAGE_XWALK_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_STAGE_XWALK_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_STAGE_XWALK_WRITER         
+
+##### IDENTITY_PROD
+# TAPAD
+  - privilege: SELECT     
+    <<: *dbschema_table_1
+    role: 
+    - SCH_IDENTITY_PROD_TAPAD_READER
+    - SCH_IDENTITY_PROD_TAPAD_WRITER
+    - SCH_IDENTITY_PROD_XWALK_WRITER
+    - SCH_IDENTITY_STAGE_XWALK_WRITER       
+    - SCH_IDENTITY_DEV_XWALK_WRITER     
+  - privilege: INSERT     
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_PROD_TAPAD_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_PROD_TAPAD_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_1
+    role: 
+      - SCH_IDENTITY_PROD_TAPAD_WRITER         
+
+  # INFUTOR
+  - privilege: SELECT     
+    <<: *dbschema_table_2
+    role: 
+    - SCH_IDENTITY_PROD_INFUTOR_READER
+    - SCH_IDENTITY_PROD_INFUTOR_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_2
+    role: 
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+    
+  # INFUTOR_HISTORY
+  - privilege: SELECT     
+    <<: *dbschema_table_3
+    role: 
+    - SCH_IDENTITY_PROD_INFUTOR_READER
+    - SCH_IDENTITY_PROD_INFUTOR_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_3
+    role: 
+      - SCH_IDENTITY_PROD_INFUTOR_WRITER         
+    
+  # XWALK
+  - privilege: SELECT     
+    <<: *dbschema_table_4
+    role: 
+    - SCH_IDENTITY_PROD_XWALK_READER
+    - SCH_IDENTITY_PROD_XWALK_WRITER
+     
+  - privilege: INSERT     
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_PROD_XWALK_WRITER         
+
+  - privilege: DELETE     
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_PROD_XWALK_WRITER         
+
+  - privilege: UPDATE  
+    <<: *dbschema_table_4
+    role: 
+      - SCH_IDENTITY_PROD_XWALK_WRITER         
+
+##### PROD
+# IDENTITY
+  - privilege: SELECT     
+    <<: *dbschema_table_5
+    role: 
+    - FUNC_XWALK_ADMIN_DEV
